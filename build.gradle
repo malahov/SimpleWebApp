@@ -1,0 +1,29 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.8
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+
+jettyRun {
+    stopKey = 'stop'
+    stopPort = 8081
+}
+
+jettyRunWar {
+    stopKey = 'stop'
+    stopPort = 8081
+}
+
+jettyStop {
+    stopKey = 'stop'
+    stopPort = 8081
+}
